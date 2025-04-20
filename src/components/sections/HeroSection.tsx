@@ -102,19 +102,19 @@ export default function HeroSection() {
               <div aria-hidden="true" className="absolute -bottom-10 -left-10 h-24 w-24 rounded-full bg-pink-100/80 blur-xl"></div>
               
               {/* Floating badges */}
-              <AnimatedElement animation="slide-down" delay={600} duration={600} className="absolute -top-6 -left-6">
-                <div className="bg-background border-2 border-pink-200 shadow-lg p-3 rounded-lg flex items-center gap-3 max-w-[180px]">
-                  <div className="p-2 rounded-full bg-pink-100 flex-shrink-0">
-                    <Mic className="h-4 w-4 text-pink-500" />
+              <AnimatedElement animation="slide-down" delay={600} duration={600} className="absolute top-0 left-0 sm:-top-6 sm:-left-6 transform translate-y-[-50%] translate-x-[10%] sm:translate-y-0 sm:translate-x-0 z-10">
+                <div className="bg-background border-2 border-primary/40 shadow-md p-2.5 rounded-lg flex items-center gap-2.5 max-w-[160px]">
+                  <div className="p-1.5 rounded-full bg-primary/10 flex-shrink-0">
+                    <Sparkles className="h-4 w-4 text-primary" />
                   </div>
                   <div>
-                    <div className="text-xs font-medium">Accuracy</div>
-                    <div className="text-sm font-bold">98.7%</div>
+                    <div className="text-xs font-medium">AI Power</div>
+                    <div className="text-sm font-bold">Smart Analysis</div>
                   </div>
                 </div>
               </AnimatedElement>
               
-              <AnimatedElement animation="slide-up" delay={800} duration={600} className="absolute -bottom-6 right-10">
+              <AnimatedElement animation="slide-up" delay={800} duration={600} className="absolute bottom-0 right-0 sm:-bottom-6 sm:right-10 transform translate-y-[50%] translate-x-[-10%] sm:translate-y-0 sm:translate-x-0 z-10">
                 <div className="bg-background border-2 border-blue-200 shadow-lg p-3 rounded-lg max-w-[180px]">
                   <div className="text-xs font-medium mb-1">Time Saved</div>
                   <div className="text-sm font-bold">60+ min/day</div>
