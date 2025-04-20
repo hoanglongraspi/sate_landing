@@ -1,7 +1,5 @@
 import { Separator } from "@/components/ui/separator"
-import { Check, X, Quote, Building2, Trophy, Medal, Lightbulb } from "lucide-react"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Card, CardContent } from "@/components/ui/card"
+import { Check, X, Building2, Trophy, Medal, Lightbulb } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { AnimatedElement } from "@/components/ui/AnimatedElement"
 

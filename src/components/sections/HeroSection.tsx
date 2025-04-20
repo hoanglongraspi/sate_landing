@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button'
-import { Mic, Play, FileText, ChevronRight, Sparkles, Award } from 'lucide-react'
+import { Mic, Play, FileText, ChevronRight, Sparkles } from 'lucide-react'
 import { AnimatedElement } from '@/components/ui/AnimatedElement'
 
 export default function HeroSection() {

@@ -6,7 +6,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
-import { Check, FileText, Mic, Wand2 } from "lucide-react"
+import { Check, FileText, Mic } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { AnimatedElement } from '@/components/ui/AnimatedElement'
 
@@ -26,16 +26,6 @@ const features = [
     description: "Instantly generate interactive clinical reports with comprehensive speech metrics.",
     icon: FileText
   }
-]
-
-const analysisFeatures = [
-  "Mispronunciations",
-  "Unusual Pauses",
-  "Filler Words",
-  "Repetition",
-  "Grammar Checks",
-  "Speaker Diarization",
-  "Syllable Structure"
 ]
 
 export default function FeaturesSection() {
