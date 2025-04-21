@@ -50,8 +50,8 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.2 0 0);
   
-  /* Primary: Blue */
-  --primary: oklch(0.55 0.18 245);
+  /* Primary: Blue - updated to match the image */
+  --primary: oklch(0.58 0.22 250);
   --primary-foreground: oklch(1 0 0);
   
   /* Secondary: Light gray */
@@ -75,7 +75,7 @@
   --ring: oklch(0.55 0.18 245 / 30%);
   
   /* Chart colors */
-  --chart-1: oklch(0.55 0.18 245); /* Blue */
+  --chart-1: oklch(0.58 0.22 250); /* Blue */
   --chart-2: oklch(0.65 0.2 300); /* Purple */
   --chart-3: oklch(0.7 0.15 130); /* Green */
   --chart-4: oklch(0.75 0.18 90); /* Orange */
@@ -101,7 +101,7 @@
   --popover-foreground: oklch(0.95 0 0);
   
   /* Primary: Blue, brighter in dark mode */
-  --primary: oklch(0.6 0.2 245);
+  --primary: oklch(0.62 0.24 250);
   --primary-foreground: oklch(1 0 0);
   
   /* Secondary: Dark gray */
@@ -125,7 +125,7 @@
   --ring: oklch(0.6 0.2 245 / 40%);
   
   /* Chart colors - brighter for dark mode */
-  --chart-1: oklch(0.6 0.2 245); /* Blue */
+  --chart-1: oklch(0.62 0.24 250); /* Blue */
   --chart-2: oklch(0.7 0.22 300); /* Purple */
   --chart-3: oklch(0.65 0.17 130); /* Green */
   --chart-4: oklch(0.7 0.2 90); /* Orange */
@@ -148,6 +148,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
   }
 }
 
@@ -220,4 +221,19 @@
 
 .animate-pulse-slow {
   animation: pulseSlow 4s ease-in-out infinite;
+}
+
+/* Shine animation for UI border */
+@keyframes shine {
+  0% {
+    background-position: -100% center;
+  }
+  100% {
+    background-position: 300% center;
+  }
+}
+
+.animate-shine {
+  background-size: 200% auto;
+  animation: shine 8s linear infinite;
 }
