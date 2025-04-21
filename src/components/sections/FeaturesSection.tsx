@@ -170,39 +170,39 @@ export default function FeaturesSection() {
                     
                     <TabsContent value="issues">
                       <div className="space-y-8">
-                        <div className="flex items-start gap-4">
-                          <div className="h-12 w-12 rounded-full bg-pink-100 flex items-center justify-center shrink-0">
+                        <div className="flex flex-col md:flex-row items-start gap-4">
+                          <div className="h-12 w-12 rounded-full bg-pink-100 flex items-center justify-center shrink-0 mx-auto md:mx-0 mb-4 md:mb-0">
                             <div className="h-6 w-6 rounded-full bg-pink-300"></div>
                           </div>
                           
-                          <div className="flex-1">
-                            <div className="flex items-center justify-between mb-1">
-                              <h3 className="text-3xl font-bold">Mispronunciation</h3>
-                              <span className="text-lg font-bold bg-pink-100 text-foreground px-3 py-1 rounded-full">3</span>
+                          <div className="flex-1 w-full">
+                            <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 md:mb-1">
+                              <h3 className="text-2xl md:text-3xl font-bold text-center md:text-left">Mispronunciation</h3>
+                              <span className="text-lg font-bold bg-pink-100 text-foreground px-3 py-1 rounded-full self-center md:self-auto mt-2 md:mt-0">3</span>
                             </div>
                             
-                            <p className="text-xl mb-6 text-muted-foreground">
+                            <p className="text-lg md:text-xl mb-6 text-muted-foreground text-center md:text-left">
                               Words or sounds that are pronounced incorrectly, affecting clarity.
                             </p>
                             
                             <div className="space-y-6">
                               <div className="border-t pt-6">
-                                <div className="flex justify-between items-center mb-2">
-                                  <h4 className="text-2xl">communimacation</h4>
+                                <div className="flex flex-col md:flex-row justify-between items-center md:items-baseline gap-2 md:gap-0">
+                                  <h4 className="text-xl md:text-2xl">communimacation</h4>
                                   <span className="text-blue-500">0:17 - 0:20</span>
                                 </div>
                               </div>
                               
                               <div className="border-t pt-6">
-                                <div className="flex justify-between items-center mb-2">
-                                  <h4 className="text-2xl">nervo</h4>
+                                <div className="flex flex-col md:flex-row justify-between items-center md:items-baseline gap-2 md:gap-0">
+                                  <h4 className="text-xl md:text-2xl">nervo</h4>
                                   <span className="text-blue-500">1:36 - 1:39</span>
                                 </div>
                               </div>
                               
                               <div className="border-t pt-6">
-                                <div className="flex justify-between items-center mb-2">
-                                  <h4 className="text-2xl">definately</h4>
+                                <div className="flex flex-col md:flex-row justify-between items-center md:items-baseline gap-2 md:gap-0">
+                                  <h4 className="text-xl md:text-2xl">definately</h4>
                                   <span className="text-blue-500">2:15 - 2:18</span>
                                 </div>
                               </div>

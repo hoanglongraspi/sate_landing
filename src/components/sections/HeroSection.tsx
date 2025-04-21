@@ -66,39 +66,34 @@ export default function HeroSection() {
           <AnimatedElement animation="slide-left" duration={1000} delay={200} className="lg:w-7/12 mt-6 lg:mt-0">
             <div className="relative">
               {/* Main image with enhanced, beautiful gradient outline to emphasize UI */}
-              <div className="relative p-[3px] overflow-hidden rounded-xl bg-gradient-to-r from-blue-300/70 via-purple-300/70 to-pink-300/70 shadow-[0_5px_30px_rgba(100,100,255,0.3)]">
-                {/* Animated gradient overlay */}
-                <div className="absolute inset-0 w-full h-full bg-gradient-to-tr from-blue-300/20 via-purple-300/20 to-pink-300/20 rounded-xl opacity-70 animate-pulse-slow"></div>
-                
-                {/* Inner glow */}
-                <div className="absolute inset-[1px] rounded-lg bg-white"></div>
-                
+              <div className="relative overflow-hidden rounded-3xl bg-white border-[3px] border-blue-200 shadow-[0_8px_30px_rgba(0,0,0,0.12)]">                
                 {/* Image */}
                 <img 
                   src="/UI.png" 
                   alt="SATE UI Interface showing speech analysis dashboard" 
-                  className="w-full h-auto rounded-lg relative z-10" 
+                  className="w-full h-auto rounded-2xl relative z-10" 
                 />
                 
-                {/* Shine effect */}
-                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent rounded-xl opacity-30 animate-shine"></div>
+                {/* Subtle gradient overlay at the bottom */}
+                <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-blue-50/30 to-transparent"></div>
               </div>
               
-              {/* Floating badges */}
-              <div className="absolute -top-6 -left-6 z-20 bg-white/95 dark:bg-background border border-gray-200 shadow-lg p-3 rounded-lg">
+              {/* Floating badges - AI Power */}
+              <div className="absolute top-0 sm:-top-4 md:-top-6 left-0 sm:-left-4 md:-left-6 z-20 bg-white/95 dark:bg-background border border-gray-200 shadow-lg p-2 sm:p-3 rounded-lg scale-75 sm:scale-90 md:scale-100 origin-top-left">
                 <div className="flex items-center gap-2">
                   <Sparkles className="h-4 w-4 text-primary" />
                   <div>
                     <div className="text-xs">AI Power</div>
-                    <div className="font-medium">Smart Analysis</div>
+                    <div className="font-medium text-sm sm:text-base">Smart Analysis</div>
                   </div>
                 </div>
               </div>
               
-              <div className="absolute -bottom-6 right-10 z-20 bg-white/95 dark:bg-background border border-gray-200 shadow-lg p-3 rounded-lg">
+              {/* Floating badges - Time Saved */}
+              <div className="absolute bottom-0 sm:-bottom-4 md:-bottom-6 right-8 sm:right-16 md:right-8 z-20 bg-white/95 dark:bg-background border border-gray-200 shadow-lg p-2 sm:p-3 rounded-lg scale-75 sm:scale-90 md:scale-100 origin-bottom-right">
                 <div>
                   <div className="text-xs">Time Saved</div>
-                  <div className="font-medium">60+ min/day</div>
+                  <div className="font-medium text-sm sm:text-base">60+ min/day</div>
                 </div>
               </div>
             </div>
