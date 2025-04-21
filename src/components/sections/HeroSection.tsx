@@ -79,21 +79,28 @@ export default function HeroSection() {
               </div>
               
               {/* Floating badges - AI Power */}
-              <div className="absolute top-0 sm:-top-4 md:-top-6 left-0 sm:-left-4 md:-left-6 z-20 bg-white/95 dark:bg-background border border-gray-200 shadow-lg p-2 sm:p-3 rounded-lg scale-75 sm:scale-90 md:scale-100 origin-top-left">
-                <div className="flex items-center gap-2">
-                  <Sparkles className="h-4 w-4 text-primary" />
+              <div className="absolute top-2 sm:-top-4 md:-top-6 left-2 sm:-left-4 md:-left-6 z-20 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/80 dark:to-indigo-950/80 backdrop-blur-md border border-blue-200/80 dark:border-blue-800/50 shadow-lg shadow-blue-500/10 p-2.5 sm:p-3.5 rounded-xl scale-85 sm:scale-90 md:scale-100 origin-top-left transition-all duration-300 hover:shadow-blue-500/20 hover:scale-[1.03] group">
+                <div className="flex items-center gap-2.5">
+                  <div className="bg-gradient-to-br from-blue-500 to-indigo-600 p-1.5 rounded-lg flex items-center justify-center shadow-inner shadow-white/10">
+                    <Sparkles className="h-4 w-4 text-white" />
+                  </div>
                   <div>
-                    <div className="text-xs">AI Power</div>
-                    <div className="font-medium text-sm sm:text-base">Smart Analysis</div>
+                    <div className="text-xs font-medium text-blue-600 dark:text-blue-400 tracking-wide uppercase group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors">AI Power</div>
+                    <div className="font-semibold text-sm sm:text-base bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Smart Analysis</div>
                   </div>
                 </div>
               </div>
               
               {/* Floating badges - Time Saved */}
-              <div className="absolute bottom-0 sm:-bottom-4 md:-bottom-6 right-8 sm:right-16 md:right-8 z-20 bg-white/95 dark:bg-background border border-gray-200 shadow-lg p-2 sm:p-3 rounded-lg scale-75 sm:scale-90 md:scale-100 origin-bottom-right">
-                <div>
-                  <div className="text-xs">Time Saved</div>
-                  <div className="font-medium text-sm sm:text-base">60+ min/day</div>
+              <div className="absolute bottom-2 sm:-bottom-4 md:-bottom-6 right-8 sm:right-16 md:right-8 z-20 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/80 dark:to-indigo-950/80 backdrop-blur-md border border-blue-200/80 dark:border-blue-800/50 shadow-lg shadow-blue-500/10 p-2.5 sm:p-3.5 rounded-xl scale-85 sm:scale-90 md:scale-100 origin-bottom-right transition-all duration-300 hover:shadow-blue-500/20 hover:scale-[1.03] group">
+                <div className="flex items-center gap-2.5">
+                  <div className="bg-gradient-to-br from-blue-500 to-indigo-600 p-1.5 rounded-lg flex items-center justify-center shadow-inner shadow-white/10">
+                    <FileText className="h-4 w-4 text-white" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-medium text-blue-600 dark:text-blue-400 tracking-wide uppercase group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors">Time Saved</div>
+                    <div className="font-semibold text-sm sm:text-base bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">60+ min/day</div>
+                  </div>
                 </div>
               </div>
             </div>
