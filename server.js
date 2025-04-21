@@ -20,7 +20,7 @@ app.get('*', (req, res) => {
   res.sendFile(join(__dirname, 'dist', 'index.html'));
 });
 
-// Start the server, binding to 0.0.0.0 as required by Render
-app.listen(PORT, '0.0.0.0', () => {
+// Start the server, binding to all interfaces as required by Render
+app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 }); 
