@@ -94,8 +94,8 @@ export default function Header() {
         {/* CTA Button (Desktop) */}
         <div className="hidden md:block">
           <Button asChild className="bg-primary hover:bg-primary/90 text-white">
-            <a href="#cta" className="group">
-              Request Demo
+            <a href="/demo" className="group">
+              Watch the Demo
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           </Button>
@@ -125,8 +125,8 @@ export default function Header() {
                   </a>
                 ))}
                 <Button asChild className="mt-6 bg-primary hover:bg-primary/90 text-white">
-                  <a href="#cta" onClick={() => setIsOpen(false)}>
-                    Request Demo
+                  <a href="https://demo.sate.acency" onClick={() => setIsOpen(false)}>
+                    Watch the Demo
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
                 </Button>

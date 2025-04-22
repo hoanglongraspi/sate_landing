@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button'
-import { Play, ChevronRight, Sparkles, FileText } from 'lucide-react'
+import { Play, ChevronRight, Sparkles, FileText, Zap } from 'lucide-react'
 import { AnimatedElement } from '@/components/ui/AnimatedElement'
 
 export default function HeroSection() {
@@ -33,29 +33,38 @@ export default function HeroSection() {
                 <AnimatedElement animation="fade-in" delay={200} duration={600}>
                   <div className="flex flex-col sm:flex-row gap-4 pt-1">
                     <Button asChild size="lg" className="group bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300">
-                      <a href="#cta">
-                        <span>Request Demo</span>
+                      <a href="https://demo.sate.acency">
+                        <span>Watch the Demo</span>
                         <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </a>
                     </Button>
-                    <Button asChild size="lg" variant="outline" className="gap-2 border-primary/30 hover:bg-primary/5">
+                    {/* <Button asChild size="lg" variant="outline" className="gap-2 border-primary/30 hover:bg-primary/5">
                       <a href="#">
                         <Play className="h-4 w-4 text-primary" />
                         <span>Watch Video</span>
                       </a>
-                    </Button>
+                    </Button> */}
                   </div>
                 </AnimatedElement>
 
-                <div className="flex gap-6 pt-2">
-                  <div className="flex items-center gap-1.5">
-                    <Sparkles className="h-4 w-4 text-primary" size={16} />
-                    <span className="text-sm">Fully Automated Annotation</span>
+                <div className="flex flex-col space-y-3 pt-3">
+                  <div className="flex items-center gap-2.5">
+                    <div className="p-1.5 rounded-full bg-primary/10 flex items-center justify-center">
+                      <Sparkles className="h-5 w-5 text-primary" />
+                    </div>
+                    <span className="text-base font-medium">Reliable Verbatim Transcription</span>
                   </div>
-                  <div className="w-1 h-1 rounded-full bg-muted"></div>
-                  <div className="flex items-center gap-1.5">
-                    <FileText className="h-4 w-4 text-primary" size={16} />
-                    <span className="text-sm">Interactive Reporting</span>
+                  <div className="flex items-center gap-2.5">
+                    <div className="p-1.5 rounded-full bg-primary/10 flex items-center justify-center">
+                      <Zap className="h-5 w-5 text-primary" />
+                    </div>
+                    <span className="text-base font-medium">Fully Automated Annotation</span>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <div className="p-1.5 rounded-full bg-primary/10 flex items-center justify-center">
+                      <FileText className="h-5 w-5 text-primary" />
+                    </div>
+                    <span className="text-base font-medium">Speech Analysis & Report</span>
                   </div>
                 </div>
               </div>
@@ -63,23 +72,22 @@ export default function HeroSection() {
           </div>
 
           {/* Dashboard Image */}
-          <AnimatedElement animation="slide-left" duration={1000} delay={200} className="lg:w-7/12 mt-6 lg:mt-0">
-            <div className="relative">
+          <AnimatedElement animation="slide-left" duration={1000} delay={200} className="mt-6 lg:mt-0">
+            <div className="relative inline-block">
               {/* Main image with enhanced, beautiful gradient outline to emphasize UI */}
-              <div className="relative overflow-hidden rounded-3xl bg-white border-[3px] border-blue-200 shadow-[0_8px_30px_rgba(0,0,0,0.12)]">                
-                {/* Image */}
-                <img 
-                  src="/UI.png" 
-                  alt="SATE UI Interface showing speech analysis dashboard" 
-                  className="w-full h-auto rounded-2xl relative z-10" 
+              <div className="relative overflow-hidden rounded-3xl bg-white border-[3px] border-blue-200 shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
+                {/* Image perfectly fits the frame */}
+                <img
+                  src="/UI.png"
+                  alt="SATE UI Interface showing speech analysis dashboard"
+                  className="block max-w-full h-auto rounded-2xl relative z-10"
                 />
-                
                 {/* Subtle gradient overlay at the bottom */}
                 <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-blue-50/30 to-transparent"></div>
               </div>
-              
+
               {/* Floating badges - AI Power */}
-              <div className="absolute top-2 sm:-top-4 md:-top-6 left-2 sm:-left-4 md:-left-6 z-20 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/80 dark:to-indigo-950/80 backdrop-blur-md border border-blue-200/80 dark:border-blue-800/50 shadow-lg shadow-blue-500/10 p-2.5 sm:p-3.5 rounded-xl scale-85 sm:scale-90 md:scale-100 origin-top-left transition-all duration-300 hover:shadow-blue-500/20 hover:scale-[1.03] group">
+              <div className="absolute top-2 sm:-top-4 md:-top-6 left-2 sm:-left-4 md:-left-6 z-20 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/80 dark:to-indigo-950/80 backdrop-blur-md border border-blue-200/80 dark:border-blue-800/50 shadow-lg shadow-blue-500/10 p-2.5 sm:p-3.5 rounded-xl scale-100 origin-top-left transition-all duration-300 hover:shadow-blue-500/20 hover:scale-[1.03] group">
                 <div className="flex items-center gap-2.5">
                   <div className="bg-gradient-to-br from-blue-500 to-indigo-600 p-1.5 rounded-lg flex items-center justify-center shadow-inner shadow-white/10">
                     <Sparkles className="h-4 w-4 text-white" />
@@ -90,9 +98,9 @@ export default function HeroSection() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Floating badges - Time Saved */}
-              <div className="absolute bottom-2 sm:-bottom-4 md:-bottom-6 right-8 sm:right-16 md:right-8 z-20 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/80 dark:to-indigo-950/80 backdrop-blur-md border border-blue-200/80 dark:border-blue-800/50 shadow-lg shadow-blue-500/10 p-2.5 sm:p-3.5 rounded-xl scale-85 sm:scale-90 md:scale-100 origin-bottom-right transition-all duration-300 hover:shadow-blue-500/20 hover:scale-[1.03] group">
+              <div className="absolute bottom-2 sm:-bottom-4 md:-bottom-6 right-8 sm:right-16 md:right-8 z-20 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/80 dark:to-indigo-950/80 backdrop-blur-md border border-blue-200/80 dark:border-blue-800/50 shadow-lg shadow-blue-500/10 p-2.5 sm:p-3.5 rounded-xl scale-100 origin-bottom-right transition-all duration-300 hover:shadow-blue-500/20 hover:scale-[1.03] group">
                 <div className="flex items-center gap-2.5">
                   <div className="bg-gradient-to-br from-blue-500 to-indigo-600 p-1.5 rounded-lg flex items-center justify-center shadow-inner shadow-white/10">
                     <FileText className="h-4 w-4 text-white" />
@@ -110,6 +118,9 @@ export default function HeroSection() {
         {/* Trusted by section */}
         <AnimatedElement animation="fade-in" delay={1000} duration={800}>
           <div className="mt-10 md:mt-16 text-center">
+            <br></br>
+            <br></br>
+            
             <p className="text-sm text-muted-foreground mb-4 font-medium">Trusted by leading institutions</p>
             <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
               {['Buffalo Public Schools', 'John R. Oishei Children\'s Hospital', 'DENT Neurologic Institute', 'University at Buffalo'].map((org, index) => (

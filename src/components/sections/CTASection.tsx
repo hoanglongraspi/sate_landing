@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button'
-import { FileText, Mic, Send, Sparkles, Zap, Users } from 'lucide-react'
+import { FileText, Mic, Send, Sparkles, Zap, Users, Play } from 'lucide-react'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Separator } from '@/components/ui/separator'
@@ -36,7 +36,7 @@ export default function CTASection() {
             {/* Form */}
             <AnimatedElement animation="slide-right" duration={800} delay={200} className="lg:col-span-3">
               <div className="bg-card border rounded-xl p-6 shadow-lg">
-                <h3 className="text-2xl font-bold mb-4">Request a Demo</h3>
+                <h3 className="text-2xl font-bold mb-4">Contact Us</h3>
                 <p className="text-muted-foreground mb-6">
                   See SATE in action with a personalized demo tailored to your needs.
                 </p>
@@ -65,9 +65,23 @@ export default function CTASection() {
                   </div>
                   
                   <div className="pt-2">
-                    <Button size="lg" className="w-full md:w-auto bg-primary hover:bg-primary/90 group">
-                      <span>Request Demo</span>
-                      <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    <Button
+                      asChild
+                      size="lg"
+                      variant="outline"
+                      className="w-full md:w-auto mb-4 md:mb-0 md:mr-4 group border-primary text-primary hover:border-primary hover:text-primary hover:bg-primary/10"
+                    >
+                      <a href="/contact">
+                        <span>Contact Us</span>
+                        <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </a>
+                    </Button>
+
+                    <Button asChild size="lg" className="w-full md:w-auto bg-primary hover:bg-primary/90 group">
+                      <a href="https://demo.sate.acency">
+                        <span>Watch the Demo</span>
+                        <Play className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      </a>
                     </Button>
                   </div>
                 </form>

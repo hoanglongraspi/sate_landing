@@ -9,7 +9,7 @@ export default function AboutSection() {
     {
       icon: <Timer className="h-5 w-5" />,
       title: "Save Time",
-      description: "Automate 60% of the workflow"
+      description: "Automate 80% of the workflow"
     },
     {
       icon: <Brain className="h-5 w-5" />,
@@ -19,7 +19,7 @@ export default function AboutSection() {
     {
       icon: <PieChart className="h-5 w-5" />,
       title: "Data-Driven",
-      description: "71.5% recall on mispronunciation screening"
+      description: "Machine learning models that achieve SOTA performance"
     },
     {
       icon: <FileText className="h-5 w-5" />,
@@ -120,7 +120,7 @@ export default function AboutSection() {
                     </div>
                     <div>
                       <h3 className="font-medium text-lg mb-1">Save Time</h3>
-                      <p className="text-sm text-muted-foreground">Automate 60% of the workflow</p>
+                      <p className="text-sm text-muted-foreground">Automate 80% of the workflow</p>
                     </div>
                   </div>
                 </AnimatedElement>
@@ -154,7 +154,7 @@ export default function AboutSection() {
                     </div>
                     <div>
                       <h3 className="font-medium text-lg mb-1">Data-Driven</h3>
-                      <p className="text-sm text-muted-foreground">71.5% recall on mispronunciation screening</p>
+                      <p className="text-sm text-muted-foreground">Machine learning models that achieve SOTA performance</p>
                     </div>
                   </div>
                 </AnimatedElement>
