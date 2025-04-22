@@ -34,7 +34,7 @@ export default function Footer() {
               AI-powered speech annotation and transcription that saves SLPs 1+ hour per session.
             </p>
             <Button asChild variant="outline" size="sm">
-              <a href="/demo">Watch the Demo</a>
+              <a href="https://satedemo.vercel.app/">Watch the Demo</a>
             </Button>
           </div>
           

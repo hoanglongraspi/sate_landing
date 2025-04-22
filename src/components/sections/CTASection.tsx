@@ -78,7 +78,7 @@ export default function CTASection() {
                     </Button>
 
                     <Button asChild size="lg" className="w-full md:w-auto bg-primary hover:bg-primary/90 group">
-                      <a href="https://demo.sate.acency">
+                      <a href="https://satedemo.vercel.app/">
                         <span>Watch the Demo</span>
                         <Play className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                       </a>

@@ -94,7 +94,7 @@ export default function Header() {
         {/* CTA Button (Desktop) */}
         <div className="hidden md:block">
           <Button asChild className="bg-primary hover:bg-primary/90 text-white">
-            <a href="/demo" className="group">
+            <a href="https://satedemo.vercel.app/" className="group">
               Watch the Demo
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
@@ -125,7 +125,7 @@ export default function Header() {
                   </a>
                 ))}
                 <Button asChild className="mt-6 bg-primary hover:bg-primary/90 text-white">
-                  <a href="https://demo.sate.acency" onClick={() => setIsOpen(false)}>
+                  <a href="https://satedemo.vercel.app/" onClick={() => setIsOpen(false)}>
                     Watch the Demo
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
