@@ -33,7 +33,7 @@ export default function HeroSection() {
                 <AnimatedElement animation="fade-in" delay={200} duration={600}>
                   <div className="flex flex-col sm:flex-row gap-4 pt-1">
                     <Button asChild size="lg" className="group bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300">
-                      <a href="https://satedemo.vercel.app/">
+                      <a href="https://demo.sate.agency/">
                         <span>Watch the Demo</span>
                         <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </a>
