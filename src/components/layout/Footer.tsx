@@ -63,19 +63,19 @@ export default function Footer() {
               <li>
                 <a href="mailto:info@sate.ai" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
                   <Mail className="h-4 w-4" />
-                  <span>info@sate.agency</span>
+                  <span>info@auspexmedix.com/</span>
                 </a>
               </li>
               <li>
                 <a href="tel:+11234567890" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
                   <Phone className="h-4 w-4" />
-                  <span>+1 (123) 456-7890</span>
+                  <span>+1 (716) 275-2321</span>
                 </a>
               </li>
-              <li className="text-sm text-muted-foreground flex items-start gap-2">
+              {/* <li className="text-sm text-muted-foreground flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
                 <span>340 Davis Hall, Buffalo, NY 14261</span>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
@@ -86,11 +86,11 @@ export default function Footer() {
         {/* Bottom section */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-sm text-muted-foreground">
-            © {currentYear} SATE AI. All rights reserved.
+            © {currentYear} Auspec Medix LLC. All rights reserved.
           </div>
           
           {/* Social media */}
-          <div className="flex items-center gap-4">
+          {/* <div className="flex items-center gap-4">
             {social.map((item) => (
               <a 
                 key={item.name}
@@ -101,7 +101,7 @@ export default function Footer() {
                 <item.icon className="h-5 w-5" />
               </a>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
