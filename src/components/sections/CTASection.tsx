@@ -17,7 +17,8 @@ export default function CTASection() {
     setSubmitError('')
     setIsSubmitted(false)
 
-    const formData = new FormData(e.currentTarget)
+    const form = e.currentTarget
+    const formData = new FormData(form)
     formData.append('access_key', '8f58dfbc-1614-42a2-946c-f3a4606b8a0f')
     formData.append('subject', 'SATE Interest - New Contact Form Submission')
 
@@ -34,7 +35,9 @@ export default function CTASection() {
         setSubmitError('')
         // Reset form after a short delay
         setTimeout(() => {
-          e.currentTarget.reset()
+          if (form) {
+            form.reset()
+          }
         }, 100)
       } else {
         console.error('Web3Forms error:', data)
