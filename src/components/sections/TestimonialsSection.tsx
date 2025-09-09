@@ -8,20 +8,20 @@ export default function TestimonialsSection() {
   const keyBenefits = {
     efficiency: [
       {
-        title: "Save 60+ Minutes Daily",
+        title: "Save Time Daily",
         description: "Automated transcription and analysis reduce documentation time",
         icon: Clock
       },
       {
         title: "Treat More Patients",
-        description: "Enable 20+ additional therapy sessions per month",
+        description: "Enable additional therapy sessions per month",
         icon: Users
       }
     ],
     technology: [
       {
         title: "AI-Powered Analysis",
-        description: "Real-time speech pattern recognition with 71.5% accuracy",
+        description: "Real-time speech pattern recognition with high accuracy",
         icon: Zap
       },
       {
@@ -66,10 +66,10 @@ export default function TestimonialsSection() {
 
         {/* Key Benefits Section */}
         <div className="mb-24">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
             {/* Efficiency Benefits */}
             <AnimatedElement animation="fade-in" duration={800} delay={200}>
-              <div className="space-y-6 bg-gradient-to-b from-green-50 to-transparent p-6 rounded-2xl border border-green-100">
+              <div className="h-full flex flex-col space-y-6 bg-gradient-to-b from-green-50 to-transparent p-6 rounded-2xl border border-green-100">
                 <div className="flex items-center gap-3 pb-3 border-b border-green-100">
                   <div className="p-3 rounded-full bg-green-100 text-green-600">
                     <Clock className="h-6 w-6" />
@@ -77,7 +77,7 @@ export default function TestimonialsSection() {
                   <h3 className="text-2xl font-bold text-green-800">Time & Efficiency</h3>
                 </div>
                 
-                <div className="space-y-4 mt-4">
+                <div className="flex-1 space-y-4">
                   {keyBenefits.efficiency.map((benefit, index) => (
                     <div key={index} className="bg-white border border-green-100 rounded-lg p-5 shadow-sm hover:shadow-md transition-all">
                       <div className="flex items-start gap-3">
@@ -93,19 +93,19 @@ export default function TestimonialsSection() {
                   ))}
                 </div>
                 
-                <div className="bg-green-100 rounded-lg p-5 border border-green-200 shadow-inner">
+                <div className="bg-green-100 rounded-lg p-5 border border-green-200 shadow-inner mt-auto">
                   <div className="flex items-center gap-2 text-green-800 font-bold mb-2">
                     <Shield className="h-5 w-5" />
                     <span>Time Savings Impact</span>
                   </div>
-                  <p className="text-green-700">SLPs can generate $2,000+ in additional monthly revenue by treating more patients</p>
+                  <p className="text-green-700">SLPs can generate additional revenue by treating more patients</p>
                 </div>
               </div>
             </AnimatedElement>
             
             {/* Technology Benefits */}
             <AnimatedElement animation="fade-in" duration={800} delay={300}>
-              <div className="space-y-6 bg-gradient-to-b from-blue-50 to-transparent p-6 rounded-2xl border border-blue-100">
+              <div className="h-full flex flex-col space-y-6 bg-gradient-to-b from-blue-50 to-transparent p-6 rounded-2xl border border-blue-100">
                 <div className="flex items-center gap-3 pb-3 border-b border-blue-100">
                   <div className="p-3 rounded-full bg-blue-100 text-blue-600">
                     <Zap className="h-6 w-6" />
@@ -113,7 +113,7 @@ export default function TestimonialsSection() {
                   <h3 className="text-2xl font-bold text-blue-800">Advanced Technology</h3>
                 </div>
                 
-                <div className="space-y-4 mt-4">
+                <div className="flex-1 space-y-4">
                   {keyBenefits.technology.map((benefit, index) => (
                     <div key={index} className="bg-white border border-blue-100 rounded-lg p-5 shadow-sm hover:shadow-md transition-all">
                       <div className="flex items-start gap-3">
@@ -129,19 +129,19 @@ export default function TestimonialsSection() {
                   ))}
                 </div>
                 
-                <div className="bg-blue-100 rounded-lg p-5 border border-blue-200 shadow-inner">
+                <div className="bg-blue-100 rounded-lg p-5 border border-blue-200 shadow-inner mt-auto">
                   <div className="flex items-center gap-2 text-blue-800 font-bold mb-2">
                     <Shield className="h-5 w-5" />
                     <span>Technology Edge</span>
                   </div>
-                  <p className="text-blue-700">Patented speech analysis algorithms provide unmatched accuracy and insight</p>
+                  <p className="text-blue-700">Patented speech analysis algorithms provide unmatched accuracy</p>
                 </div>
               </div>
             </AnimatedElement>
             
             {/* Clinical Benefits */}
             <AnimatedElement animation="fade-in" duration={800} delay={400}>
-              <div className="space-y-6 bg-gradient-to-b from-purple-50 to-transparent p-6 rounded-2xl border border-purple-100">
+              <div className="h-full flex flex-col space-y-6 bg-gradient-to-b from-purple-50 to-transparent p-6 rounded-2xl border border-purple-100">
                 <div className="flex items-center gap-3 pb-3 border-b border-purple-100">
                   <div className="p-3 rounded-full bg-purple-100 text-purple-600">
                     <BarChart3 className="h-6 w-6" />
@@ -149,7 +149,7 @@ export default function TestimonialsSection() {
                   <h3 className="text-2xl font-bold text-purple-800">Clinical Excellence</h3>
                 </div>
                 
-                <div className="space-y-4 mt-4">
+                <div className="flex-1 space-y-4">
                   {keyBenefits.clinical.map((benefit, index) => (
                     <div key={index} className="bg-white border border-purple-100 rounded-lg p-5 shadow-sm hover:shadow-md transition-all">
                       <div className="flex items-start gap-3">
@@ -165,7 +165,7 @@ export default function TestimonialsSection() {
                   ))}
                 </div>
                 
-                <div className="bg-purple-100 rounded-lg p-5 border border-purple-200 shadow-inner">
+                <div className="bg-purple-100 rounded-lg p-5 border border-purple-200 shadow-inner mt-auto">
                   <div className="flex items-center gap-2 text-purple-800 font-bold mb-2">
                     <Shield className="h-5 w-5" />
                     <span>Patient Outcomes</span>
@@ -271,7 +271,7 @@ export default function TestimonialsSection() {
                         <Microscope className="w-6 h-6" />
                       </div>
                       <div>
-                        <h4 className="font-bold mb-2 text-blue-800">Patented Technology</h4>
+                        <h4 className="font-bold mb-2 text-blue-800">Patented Technology <span className="italic">(Pending)</span></h4>
                         <p className="text-muted-foreground">Patent filed (UB 030-7620) for our unique speech analysis algorithms</p>
                       </div>
                     </div>

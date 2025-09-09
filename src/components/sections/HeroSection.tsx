@@ -38,12 +38,12 @@ export default function HeroSection() {
                         <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </a>
                     </Button>
-                    {/* <Button asChild size="lg" variant="outline" className="gap-2 border-primary/30 hover:bg-primary/5">
-                      <a href="#">
-                        <Play className="h-4 w-4 text-primary" />
-                        <span>Watch Video</span>
+                    <Button asChild size="lg" variant="outline" className="group border-primary/30 hover:bg-primary/5 shadow-lg hover:shadow-xl transition-all duration-300">
+                      <a href="#contact">
+                        <span>Contact Us</span>
+                        <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </a>
-                    </Button> */}
+                    </Button>
                   </div>
                 </AnimatedElement>
 
@@ -107,7 +107,7 @@ export default function HeroSection() {
                   </div>
                   <div>
                     <div className="text-xs font-medium text-blue-600 dark:text-blue-400 tracking-wide uppercase group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors">Time Saved</div>
-                    <div className="font-semibold text-sm sm:text-base bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">60+ min/day</div>
+                    <div className="font-semibold text-sm sm:text-base bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Hours Daily</div>
                   </div>
                 </div>
               </div>
@@ -121,7 +121,7 @@ export default function HeroSection() {
             <br></br>
             <br></br>
             
-            <p className="text-sm text-muted-foreground mb-4 font-medium">Trusted by leading institutions</p>
+            <p className="text-sm text-muted-foreground mb-4 font-medium">Our collaborator</p>
             <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
               {['Buffalo Public Schools', 'John R. Oishei Children\'s Hospital', 'DENT Neurologic Institute', 'University at Buffalo'].map((org, index) => (
                 <AnimatedElement 

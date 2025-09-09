@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { 
   Sheet, 
   SheetContent, 
   SheetTrigger 
 } from '@/components/ui/sheet'
-import { Menu, Zap, ArrowRight, Sparkles } from 'lucide-react'
+import { Menu, ArrowRight, Sparkles } from 'lucide-react'
 
 const navigation = [
   { name: 'About', href: '#about' },
@@ -20,6 +20,30 @@ export default function Header() {
   const [activeSection, setActiveSection] = useState<string>("")
   const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
+  const navigate = useNavigate()
+
+  // Handle navigation to home page sections
+  const handleSectionNavigation = (href: string) => {
+    if (href.startsWith('#')) {
+      if (location.pathname !== '/') {
+        // If not on home page, navigate to home page and then scroll to section
+        navigate('/')
+        // Use setTimeout to ensure the page has loaded before scrolling
+        setTimeout(() => {
+          const element = document.querySelector(href)
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' })
+          }
+        }, 100)
+      } else {
+        // If already on home page, just scroll to section
+        const element = document.querySelector(href)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }
+    }
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,11 +91,8 @@ export default function Header() {
       <div className="container max-w-8xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-primary rounded-md flex items-center justify-center transition-all duration-300 group-hover:shadow-md">
-              <Sparkles className="h-5 w-5 text-white" />
-            </div>
-            <span className="text-xl font-bold text-primary transition-all duration-300 group-hover:opacity-80">SATE AI</span>
+          <Link to="/" className="flex items-center group hover:opacity-80 transition-opacity">
+            <img src="/logo.png" alt="SATE AI" className="h-14 w-auto object-contain" />
           </Link>
         </div>
 
@@ -84,9 +105,9 @@ export default function Header() {
             
             if (item.href.startsWith('#')) {
               return (
-                <a
+                <button
                   key={item.name}
-                  href={item.href}
+                  onClick={() => handleSectionNavigation(item.href)}
                   className={`relative text-foreground hover:text-primary font-medium transition-colors py-2 ${
                     isActive ? 'text-primary' : ''
                   }`}
@@ -95,7 +116,7 @@ export default function Header() {
                   {isActive && (
                     <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full"></span>
                   )}
-                </a>
+                </button>
               )
             } else {
               return (
@@ -144,16 +165,18 @@ export default function Header() {
                   
                   if (item.href.startsWith('#')) {
                     return (
-                      <a
+                      <button
                         key={item.name}
-                        href={item.href}
-                        className={`text-foreground hover:text-primary font-medium transition-colors text-lg ${
+                        onClick={() => {
+                          handleSectionNavigation(item.href)
+                          setIsOpen(false)
+                        }}
+                        className={`text-foreground hover:text-primary font-medium transition-colors text-lg text-left ${
                           isActive ? 'text-primary' : ''
                         }`}
-                        onClick={() => setIsOpen(false)}
                       >
                         {item.name}
-                      </a>
+                      </button>
                     )
                   } else {
                     return (

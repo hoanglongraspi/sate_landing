@@ -1,32 +1,9 @@
-import React from 'react';
 import { Button } from '@/components/ui/button'
-import { PieChart, Brain, Timer, FileText, ChevronRight, BarChart2, TrendingUp, Clock, ChartBarIcon } from 'lucide-react'
+import { PieChart, Brain, Timer, FileText, BarChart2, TrendingUp } from 'lucide-react'
 import { Separator } from "@/components/ui/separator"
 import { AnimatedElement } from '@/components/ui/AnimatedElement'
 
 export default function AboutSection() {
-  const benefits = [
-    {
-      icon: <Timer className="h-5 w-5" />,
-      title: "Save Time",
-      description: "Automate 80% of the workflow"
-    },
-    {
-      icon: <Brain className="h-5 w-5" />,
-      title: "Improve Outcomes",
-      description: "AI-powered insights for personalized therapy"
-    },
-    {
-      icon: <PieChart className="h-5 w-5" />,
-      title: "Data-Driven",
-      description: "Machine learning models that achieve SOTA performance"
-    },
-    {
-      icon: <FileText className="h-5 w-5" />,
-      title: "Instant Reports",
-      description: "Professional documentation in seconds"
-    }
-  ]
 
   return (
     <section id="about" className="relative overflow-hidden pb-24">
@@ -74,28 +51,28 @@ export default function AboutSection() {
                   <div className="space-y-5">
                     <div className="grid grid-cols-2 gap-4">
                       <div className="bg-muted/40 rounded-md p-4 shadow-sm">
-                        <div className="text-sm text-muted-foreground mb-1">Additional Sessions</div>
-                        <div className="text-xl font-bold">20+ per month</div>
+                        <div className="text-sm text-muted-foreground mb-1">Patient Progress</div>
+                        <div className="text-xl font-bold text-green-600">Improving</div>
                         <div className="flex items-center text-xs text-primary mt-1">
                           <TrendingUp className="h-3 w-3 mr-1" />
-                          <span>1 per day</span>
+                          <span>Trending Up</span>
                         </div>
                       </div>
                       <div className="bg-muted/40 rounded-md p-4 shadow-sm">
-                        <div className="text-sm text-muted-foreground mb-1">Time Saved</div>
-                        <div className="text-3xl font-bold text-primary">1 hr</div>
-                        <div className="text-xs mt-1">per day per SLP</div>
+                        <div className="text-sm text-muted-foreground mb-1">Efficiency Gains</div>
+                        <div className="text-xl font-bold text-primary">Excellent</div>
+                        <div className="text-xs mt-1">Time Optimization</div>
                       </div>
                     </div>
                     
                     <div className="bg-primary/10 rounded-md p-4 shadow-sm">
                       <div className="flex justify-between items-center mb-2">
-                        <div className="text-sm font-medium">Monthly Revenue</div>
-                        <div className="text-xs text-primary bg-primary/20 px-2 py-1 rounded-full">+$2,000</div>
+                        <div className="text-sm font-medium">Practice Growth</div>
+                        <div className="text-xs text-primary bg-primary/20 px-2 py-1 rounded-full">Expanding</div>
                       </div>
                       <div className="flex items-center justify-center gap-2 py-2">
                         <BarChart2 className="h-4 w-4 text-primary" />
-                        <span className="text-lg font-bold">20+ more therapy sessions</span>
+                        <span className="text-lg font-bold">Enhanced Capacity</span>
                       </div>
                     </div>
                   </div>
@@ -120,7 +97,7 @@ export default function AboutSection() {
                     </div>
                     <div>
                       <h3 className="font-medium text-lg mb-1">Save Time</h3>
-                      <p className="text-sm text-muted-foreground">Automate 80% of the workflow</p>
+                      <p className="text-sm text-muted-foreground">Automate most of the workflow</p>
                     </div>
                   </div>
                 </AnimatedElement>

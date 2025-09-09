@@ -207,7 +207,7 @@ export default function GuidelineSection() {
       </SectionContainer>
 
       {/* Call to Action */}
-      <SectionContainer variant="accent" className="py-16">
+      {/* <SectionContainer variant="accent" className="py-16">
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-4">Need More Help?</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
@@ -230,7 +230,7 @@ export default function GuidelineSection() {
             </a>
           </div>
         </div>
-      </SectionContainer>
+      </SectionContainer> */}
     </div>
   )
 }

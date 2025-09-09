@@ -8,15 +8,11 @@ export default function Footer() {
     { name: 'About', href: '#about' },
     { name: 'Features', href: '#features' },
     { name: 'Why SATE', href: '#why-sate' },
+    { name: 'Guidelines', href: '/guideline' },
     { name: 'Doc', href: 'https://doc.sate.agency' },
   ]
   
-  const social = [
-    { name: 'Twitter', icon: Twitter, href: '#' },
-    { name: 'LinkedIn', icon: Linkedin, href: '#' },
-    { name: 'GitHub', icon: Github, href: '#' },
-    { name: 'Instagram', icon: Instagram, href: '#' },
-  ]
+  
 
   return (
     <footer className="bg-muted pt-12 pb-8 border-t border-border">
@@ -25,14 +21,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
           {/* Brand column */}
           <div className="space-y-6">
-            <a href="#" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 bg-primary rounded-md flex items-center justify-center transition-all duration-300 group-hover:shadow-md">
-                <Sparkles className="h-5 w-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-primary transition-all duration-300 group-hover:opacity-80">SATE AI</span>
+            <a href="#" className="flex items-center group">
+              <img src="/logo.png" alt="SATE AI" className="h-25 w-auto object-contain transition-all duration-300 group-hover:opacity-80" />
             </a>
             <p className="text-sm text-muted-foreground max-w-xs">
-              AI-powered speech annotation and transcription that saves SLPs 1+ hour per session.
+              AI-powered speech annotation and transcription that saves time for speech-language pathologists.
             </p>
             <Button asChild variant="outline" size="sm">
               <a href="https://demo.sate.agency/">Watch the Demo</a>
