@@ -151,54 +151,89 @@ export default function Header() {
         <div className="md:hidden">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-5 w-5" />
+              <Button variant="ghost" size="icon" className="hover:bg-primary/10">
+                <Menu className="h-6 w-6" />
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
-              <div className="flex flex-col gap-6 mt-8">
-                {navigation.map((item) => {
-                  const isActive = item.href.startsWith('#') 
-                    ? activeSection === item.href 
-                    : location.pathname === item.href
-                  
-                  if (item.href.startsWith('#')) {
-                    return (
-                      <button
-                        key={item.name}
-                        onClick={() => {
-                          handleSectionNavigation(item.href)
-                          setIsOpen(false)
-                        }}
-                        className={`text-foreground hover:text-primary font-medium transition-colors text-lg text-left ${
-                          isActive ? 'text-primary' : ''
-                        }`}
-                      >
-                        {item.name}
-                      </button>
-                    )
-                  } else {
-                    return (
-                      <Link
-                        key={item.name}
-                        to={item.href}
-                        className={`text-foreground hover:text-primary font-medium transition-colors text-lg ${
-                          isActive ? 'text-primary' : ''
-                        }`}
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {item.name}
-                      </Link>
-                    )
-                  }
-                })}
-                <Button asChild className="mt-6 bg-primary hover:bg-primary/90 text-white">
-                  <a href="https://demo.sate.agency/" onClick={() => setIsOpen(false)}>
-                    Watch the Demo
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </a>
-                </Button>
+            <SheetContent side="right" className="w-full sm:max-w-sm p-0">
+              {/* Mobile Menu Header */}
+              <div className="flex items-center justify-between p-6 border-b border-border/50">
+                <Link to="/" className="flex items-center" onClick={() => setIsOpen(false)}>
+                  <img src="/logo.png" alt="SATE AI" className="h-10 w-auto object-contain" />
+                </Link>
+              </div>
+              
+              {/* Mobile Menu Content */}
+              <div className="flex flex-col h-full">
+                <nav className="flex-1 px-6 py-8">
+                  <div className="space-y-1">
+                    {navigation.map((item) => {
+                      const isActive = item.href.startsWith('#') 
+                        ? activeSection === item.href 
+                        : location.pathname === item.href
+                      
+                      if (item.href.startsWith('#')) {
+                        return (
+                          <button
+                            key={item.name}
+                            onClick={() => {
+                              handleSectionNavigation(item.href)
+                              setIsOpen(false)
+                            }}
+                            className={`w-full text-left px-4 py-4 rounded-lg font-medium transition-all duration-200 text-base group ${
+                              isActive 
+                                ? 'text-primary bg-primary/5 border border-primary/20' 
+                                : 'text-foreground hover:text-primary hover:bg-primary/5'
+                            }`}
+                          >
+                            <div className="flex items-center justify-between">
+                              <span>{item.name}</span>
+                              {isActive && (
+                                <div className="w-2 h-2 rounded-full bg-primary"></div>
+                              )}
+                            </div>
+                          </button>
+                        )
+                      } else {
+                        return (
+                          <Link
+                            key={item.name}
+                            to={item.href}
+                            className={`block px-4 py-4 rounded-lg font-medium transition-all duration-200 text-base group ${
+                              isActive 
+                                ? 'text-primary bg-primary/5 border border-primary/20' 
+                                : 'text-foreground hover:text-primary hover:bg-primary/5'
+                            }`}
+                            onClick={() => setIsOpen(false)}
+                          >
+                            <div className="flex items-center justify-between">
+                              <span>{item.name}</span>
+                              {isActive && (
+                                <div className="w-2 h-2 rounded-full bg-primary"></div>
+                              )}
+                            </div>
+                          </Link>
+                        )
+                      }
+                    })}
+                  </div>
+                </nav>
+                
+                {/* Mobile Menu Footer */}
+                <div className="p-6 border-t border-border/50">
+                  <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white h-12 text-base font-medium">
+                    <a 
+                      href="https://demo.sate.agency/" 
+                      onClick={() => setIsOpen(false)}
+                      className="group flex items-center justify-center"
+                    >
+                      <Sparkles className="mr-2 h-4 w-4" />
+                      Watch the Demo
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </a>
+                  </Button>
+                </div>
               </div>
             </SheetContent>
           </Sheet>
