@@ -1,6 +1,7 @@
 import { SectionContainer } from '../ui/section-container'
 import { Badge } from '../ui/badge'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion'
 import { PlayCircle, Clock, Edit3, Users, Split, Merge, Tag, X } from 'lucide-react'
 
 interface VideoGuideItem {
@@ -17,7 +18,7 @@ const videoGuides: VideoGuideItem[] = [
     id: 'edit-segment',
     title: 'Edit Segment',
     description: 'Learn how to edit segments in your video content',
-    videoUrl: 'https://drive.google.com/file/d/1qJG9Xz0oeZn_nREy-ivsz4w1qUJjD_Sn/view?usp=sharing',
+    videoUrl: 'https://drive.google.com/file/d/1U_5PwLGQ33CxVgSXuJrxchsls2ebAXpP/view?usp=drive_link',
     status: 'completed',
     icon: Edit3
   },
@@ -25,40 +26,40 @@ const videoGuides: VideoGuideItem[] = [
     id: 'change-speaker-id',
     title: 'Change Speaker ID',
     description: 'How to modify and assign speaker identifications',
-    videoUrl: '',
-    status: 'in-progress',
+    videoUrl: 'https://drive.google.com/file/d/1xolN274DeQjxZlmO6p1K0uC-Jj_-0iVh/view?usp=drive_link',
+    status: 'completed',
     icon: Users
   },
   {
     id: 'split-utterance',
     title: 'Split Utterance',
     description: 'Break down utterances into smaller segments',
-    videoUrl: '',
-    status: 'in-progress',
+    videoUrl: 'https://drive.google.com/file/d/1s4XzqMSgzVJgCk4mppvq9vEc6kjETiHp/view?usp=drive_link',
+    status: 'completed',
     icon: Split
   },
   {
     id: 'merge-utterance',
     title: 'Merge Utterance',
     description: 'Combine multiple utterances into one segment',
-    videoUrl: '',
-    status: 'in-progress',
+    videoUrl: 'https://drive.google.com/file/d/1hsK_l3n8EEKba_0i787chWVBMqJAA9RK/view?usp=drive_link',
+    status: 'completed',
     icon: Merge
   },
   {
     id: 'add-annotation',
     title: 'Add Annotation',
     description: 'Add notes and annotations to your video content',
-    videoUrl: '',
-    status: 'in-progress',
+    videoUrl: 'https://drive.google.com/file/d/165iGg9bcnVFoqsD78oGU1jw7qsFCGldS/view?usp=drive_link',
+    status: 'completed',
     icon: Tag
   },
   {
     id: 'exclude',
     title: 'Exclude',
     description: 'How to exclude segments from your final output',
-    videoUrl: '',
-    status: 'in-progress',
+    videoUrl: 'https://drive.google.com/file/d/1BUcX-39JrseSd-L-tKjlJhsaP0Rs4_cm/view?usp=drive_link',
+    status: 'completed',
     icon: X
   }
 ]
@@ -125,72 +126,83 @@ export default function GuidelineSection() {
         </div>
       </SectionContainer>
 
-      {/* Short Video Guides */}
+      {/* Feature-Specific Guides with Dropdown */}
       <SectionContainer variant="muted" className="py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Feature-Specific Guides</h2>
           <p className="text-muted-foreground text-lg">
-            Quick tutorials for specific features and workflows
+            Quick tutorials for specific features and workflows only
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {videoGuides.map((guide) => {
-            const IconComponent = guide.icon
-            return (
-              <Card key={guide.id} className="group hover:shadow-lg transition-all duration-300">
-                <CardHeader>
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <IconComponent className="w-5 h-5 text-primary" />
+        <div className="max-w-4xl mx-auto">
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {videoGuides.map((guide) => {
+              const IconComponent = guide.icon
+              return (
+                <AccordionItem 
+                  key={guide.id} 
+                  value={guide.id}
+                  className="border rounded-lg bg-card shadow-sm"
+                >
+                  <AccordionTrigger className="px-6 py-4 hover:no-underline">
+                    <div className="flex items-center gap-4 text-left">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
+                        <IconComponent className="w-6 h-6 text-primary" />
                       </div>
-                      <Badge 
-                        variant={guide.status === 'completed' ? 'default' : 'secondary'}
-                        className="text-xs"
-                      >
-                        {guide.status === 'completed' ? (
-                          <>
-                            <PlayCircle className="w-3 h-3 mr-1" />
-                            Available
-                          </>
-                        ) : (
-                          <>
-                            <Clock className="w-3 h-3 mr-1" />
-                            In Progress
-                          </>
-                        )}
-                      </Badge>
-                    </div>
-                  </div>
-                  <CardTitle className="text-lg">{guide.title}</CardTitle>
-                  <CardDescription className="text-sm">
-                    {guide.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  {guide.status === 'completed' && guide.videoUrl ? (
-                    <div className="relative aspect-video rounded-md overflow-hidden bg-muted">
-                      <iframe
-                        src={convertToEmbedUrl(guide.videoUrl)}
-                        className="w-full h-full"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        title={guide.title}
-                      />
-                    </div>
-                  ) : (
-                    <div className="relative aspect-video rounded-md overflow-hidden bg-muted flex items-center justify-center">
-                      <div className="text-center">
-                        <Clock className="w-8 h-8 text-muted-foreground mx-auto mb-2" />
-                        <p className="text-sm text-muted-foreground">Coming Soon</p>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-2">
+                          <h3 className="text-lg font-semibold">{guide.title}</h3>
+                          <Badge 
+                            variant={guide.status === 'completed' ? 'default' : 'secondary'}
+                            className="text-xs"
+                          >
+                            {guide.status === 'completed' ? (
+                              <>
+                                <PlayCircle className="w-3 h-3 mr-1" />
+                                Available
+                              </>
+                            ) : (
+                              <>
+                                <Clock className="w-3 h-3 mr-1" />
+                                In Progress
+                              </>
+                            )}
+                          </Badge>
+                        </div>
+                        <p className="text-sm text-muted-foreground">
+                          {guide.description}
+                        </p>
                       </div>
                     </div>
-                  )}
-                </CardContent>
-              </Card>
-            )
-          })}
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-6">
+                    {guide.status === 'completed' && guide.videoUrl ? (
+                      <div className="relative aspect-video rounded-lg overflow-hidden bg-muted shadow-lg">
+                        <iframe
+                          src={convertToEmbedUrl(guide.videoUrl)}
+                          className="w-full h-full"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          title={guide.title}
+                        />
+                      </div>
+                    ) : (
+                      <div className="relative aspect-video rounded-lg overflow-hidden bg-muted flex items-center justify-center">
+                        <div className="text-center">
+                          <Clock className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
+                          <p className="text-lg font-medium text-muted-foreground mb-2">Coming Soon</p>
+                          <p className="text-sm text-muted-foreground">
+                            This video tutorial is currently in development
+                          </p>
+                        </div>
+                      </div>
+                    )}
+                  </AccordionContent>
+                </AccordionItem>
+              )
+            })}
+          </Accordion>
         </div>
       </SectionContainer>
 

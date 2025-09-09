@@ -8,6 +8,7 @@ export default function Footer() {
     { name: 'About', href: '#about' },
     { name: 'Features', href: '#features' },
     { name: 'Why SATE', href: '#why-sate' },
+    { name: 'Doc', href: 'https://doc.sate.agency' },
   ]
   
   const social = [
