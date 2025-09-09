@@ -271,8 +271,8 @@ export default function TestimonialsSection() {
                         <Microscope className="w-6 h-6" />
                       </div>
                       <div>
-                        <h4 className="font-bold mb-2 text-blue-800">Patented Technology <span className="italic">(Pending)</span></h4>
-                        <p className="text-muted-foreground">Patent filed (UB 030-7620) for our unique speech analysis algorithms</p>
+                        <h4 className="font-bold mb-2 text-blue-800">Patented Technology</h4>
+                        <p className="text-muted-foreground">Patent pending for our unique speech analysis algorithms</p>
                       </div>
                     </div>
                   </div>

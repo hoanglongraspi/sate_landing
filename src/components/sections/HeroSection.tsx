@@ -121,7 +121,7 @@ export default function HeroSection() {
             <br></br>
             <br></br>
             
-            <p className="text-sm text-muted-foreground mb-4 font-medium">Our collaborator</p>
+            <p className="text-sm text-muted-foreground mb-4 font-medium">Our collaborators</p>
             <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
               {['Buffalo Public Schools', 'John R. Oishei Children\'s Hospital', 'DENT Neurologic Institute', 'University at Buffalo'].map((org, index) => (
                 <AnimatedElement 
