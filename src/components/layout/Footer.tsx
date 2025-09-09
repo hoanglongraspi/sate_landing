@@ -56,7 +56,7 @@ export default function Footer() {
               <li>
                 <a href="mailto:info@sate.ai" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
                   <Mail className="h-4 w-4" />
-                  <span>info@auspexmedix.com</span>
+                  <span>services@sate.agency</span>
                 </a>
               </li>
               <li>
