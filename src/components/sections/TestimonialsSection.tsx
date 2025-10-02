@@ -1,6 +1,7 @@
 import { Separator } from "@/components/ui/separator"
-import { Shield, Building2, Trophy, Medal, Lightbulb, BookOpen, Microscope, Hospital, Zap, BarChart3, Layers, Clock, Users, FileText } from "lucide-react"
+import { Shield, Building2, Trophy, Medal, Lightbulb, BookOpen, Microscope, Hospital, Zap, BarChart3, Layers, Clock, Users, FileText, Mail, ChevronRight } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import { AnimatedElement } from '@/components/ui/AnimatedElement'
 
 export default function TestimonialsSection() {
@@ -289,6 +290,34 @@ export default function TestimonialsSection() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </AnimatedElement>
+        </div>
+
+        {/* Join Waitlist Section */}
+        <div className="mb-16">
+          <AnimatedElement animation="fade-in" duration={700} delay={700}>
+            <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl border border-primary/20 p-10 shadow-lg text-center">
+              <div className="flex items-center justify-center gap-4 mb-6">
+                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary">
+                  <Mail className="h-6 w-6" />
+                </div>
+                <h3 className="text-2xl font-bold text-primary">Join Our Waitlist</h3>
+              </div>
+              
+              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+                Be among the first to experience the future of speech therapy. Get early access to SATE AI and help shape the next generation of speech-language pathology tools.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Button asChild size="lg" className="group bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <a href="https://forms.gle/GzvXWPNJYF3EeBn56">
+                    <span>Join Waitlist Now</span>
+                    <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </a>
+                </Button>
+                
               </div>
             </div>
           </AnimatedElement>

@@ -18,7 +18,7 @@ export default function Footer() {
     <footer className="bg-muted pt-12 pb-8 border-t border-border">
       <div className="container mx-auto px-6">
         {/* Top section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand column */}
           <div className="space-y-6">
             <a href="#" className="flex items-center group">
@@ -49,14 +49,25 @@ export default function Footer() {
             </ul>
           </div>
           
+          {/* Join Waitlist */}
+          <div>
+            <h3 className="font-semibold text-foreground mb-4">Join Waitlist</h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              Be the first to know when SATE AI becomes available.
+            </p>
+            <Button asChild variant="default" size="sm" className="w-full">
+              <a href="https://forms.gle/GzvXWPNJYF3EeBn56">Join Waitlist</a>
+            </Button>
+          </div>
+          
           {/* Contact */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Contact</h3>
+            <h3 className="font-semibold text-foreground mb-4">Send us a Message</h3>
             <ul className="space-y-3">
               <li>
                 <a href="mailto:info@sate.ai" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
                   <Mail className="h-4 w-4" />
-                  <span>services@sate.agency</span>
+                  <span>sate@auspexmedix.com</span>
                 </a>
               </li>
               <li>

@@ -140,8 +140,8 @@ export default function Header() {
         {/* CTA Button (Desktop) */}
         <div className="hidden md:block">
           <Button asChild className="bg-primary hover:bg-primary/90 text-white">
-            <a href="https://demo.sate.agency/" className="group">
-              Watch the Demo
+            <a href="https://forms.gle/GzvXWPNJYF3EeBn56" className="group">
+              Join Waitlist
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           </Button>
