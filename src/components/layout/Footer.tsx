@@ -28,7 +28,7 @@ export default function Footer() {
               AI-powered speech annotation and transcription that saves time for speech-language pathologists.
             </p>
             <Button asChild variant="outline" size="sm">
-              <a href="https://demo.sate.agency/">Watch the Demo</a>
+              <a href="https://forms.gle/GzvXWPNJYF3EeBn56">Join Waitlist</a>
             </Button>
           </div>
           
